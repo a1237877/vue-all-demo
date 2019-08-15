@@ -2,12 +2,12 @@
   <section class="list-block">
     <div class="info" @click="$emit('more')">
       <h1 class="title">{{title}}</h1> 
-      <i class="iconfont iconfont-right"></i>
+      <i class="iconfont icon-right"></i>
     </div>
     <!-- v-if用来判断是否有数据 -->
     <div class="list" v-if="movies.length">   
       <!-- 点击电影去到相应的页面 用item.id来标识 -->
-      <div class="item" v-for="item in movies" :key="item.id" @click="$emit('select',item.id)">
+      <div class="item" v-for="item in movies" :key="item._id" @click="$emit('select',item._id)">
         <div class="image">
           <img v-lazy="item.poster" alt="" width="100%" height="100%">
           <!-- 正在上映的电影有评分 -->

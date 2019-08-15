@@ -6,6 +6,7 @@ import router from './router'
 import globalComponents from './js/components'
 import './common/stylus/reset.styl'
 import VueLazyload from 'vue-lazyload'
+import './assets/iconfont.css'
 
 Vue.config.productionTip = false
 Vue.use(globalComponents)
